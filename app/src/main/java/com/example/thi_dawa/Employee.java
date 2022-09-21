@@ -1,49 +1,56 @@
 package com.example.thi_dawa;
 
 public class Employee {
-    private String Name;
-    private String Designation;
-    private String Salary;
+    private int id;
+    private String name;
+    private String designation;
+    private double salary;
 
     public Employee() {
     }
 
-    public Employee(String name, String designation, String salary) {
-        Name = name;
-        Designation = designation;
-        Salary = salary;
+    public Employee(int id, String name, String designation, double salary) {
+        this.id = id;
+        this.name = name;
+        this.designation = designation;
+        this.salary = salary;
+    }
+
+    public Employee(String name, String designation, double salary) {
+        this.name = name;
+        this.designation = designation;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDesignation() {
-        return Designation;
+        return designation;
     }
 
     public void setDesignation(String designation) {
-        Designation = designation;
+        this.designation = designation;
     }
 
-    public String getSalary() {
-        return Salary;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setSalary(String salary) {
-        Salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "Name='" + Name + '\'' +
-                ", Designation='" + Designation + '\'' +
-                ", Salary='" + Salary + '\'' +
-                '}';
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 }
